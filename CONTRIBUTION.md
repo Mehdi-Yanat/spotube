@@ -44,7 +44,7 @@ If you then still feel the need to ask a question and need clarification, we rec
 
 - Open an [Discussion](https://github.com/KRTirtho/spotube/discussions/new) with the question label.
 - Provide as much context as you can about what you're running into.
-- Provide project and platform versions (flutter, dart, pub, linux etc..), depending on what seems relevant.
+- Provide project and platform versions (Flutter, Dart, and the Android/iOS version), depending on what seems relevant.
 
 We will then take care of the issue as soon as possible.
 
@@ -66,7 +66,7 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 - Also make sure to search the internet (including Stack Overflow) to see if users outside of the GitHub community have discussed the issue.
 - Collect information about the bug:
 - Stack trace (Traceback)
-- OS, Platform and Version (Windows, Linux, macOS, x86, ARM)
+- OS, platform and version (Android or iOS)
 - Version of the interpreter, compiler, SDK, runtime environment, package manager, depending on what seems relevant.
 - Possibly your input and the output
 - Can you reliably reproduce the issue? And can you also reproduce it with older versions?
@@ -110,30 +110,14 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/KRTirt
 - Use a **clear and descriptive title** for the issue to identify the suggestion.
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
 - **Describe the current behavior** and **explain which behavior you expected to see instead** and why. At this point you can also tell which alternatives do not work for you.
-- You may want to **include screenshots and animated GIFs** which help you demonstrate the steps or point out the part which the suggestion is related to. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux. <!-- this should only be included if the project has a GUI -->
+- You may want to **include screenshots and animated GIFs** which help you demonstrate the steps or point out the part which the suggestion is related to. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux. <!-- this should only be included if the project has a GUI -->
 - **Explain why this enhancement would be useful** to most Spotube users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
 
 ### Your First Code Contribution
 
-<!-- Download -->
-
 Do the following:
 
 - Install [Dart](https://dart.dev/get-dart) and [fvm](https://fvm.app/documentation/getting-started/installation)
-- Install Development dependencies in linux
-  - Debian (>=12/Bookworm)/Ubuntu
-    ```bash
-    $ apt-get install mpv libmpv-dev libappindicator3-1 gir1.2-appindicator3-0.1 libappindicator3-dev libsecret-1-0 libjsoncpp25 libsecret-1-dev libjsoncpp-dev libnotify-bin libnotify-dev avahi-daemon avahi-discover avahi-utils libnss-mdns mdns-scan libwebkit2gtk-4.1-0 libwebkit2gtk-4.1-dev libsoup-3.0-0 libsoup-3.0-dev
-    ```
-    - Use `libjsoncpp1` instead of `libjsoncpp25` (for Ubuntu < 22.04)
-  - Arch/Manjaro
-    ```bash
-    yay -S mpv libappindicator-gtk3 libsecret jsoncpp libnotify avahi nss-mdns mdns-scan webkit2gtk-4.1 libsoup3
-    ```
-  - Fedora
-    ```bash
-    dnf install mpv mpv-devel libappindicator-gtk3 libappindicator-gtk3-devel libsecret libsecret-devel jsoncpp jsoncpp-devel libnotify libnotify-devel avahi mdns-scan nss-mdns webkit2gtk4.1 webkit2gtk4.1-devel libsoup3 libsoup3-devel
-    ```
 - Clone the Repo
 - Create a `.env` in root of the project following the `.env.example` template
 - Now run the following to bootstrap the project
@@ -142,7 +126,11 @@ Do the following:
   ```
 - Finally run these following commands in the root of the project to start the Spotube Locally
   ```bash
-  fvm flutter run -d <window|macos|linux|(<android-device-id>)>
+  fvm flutter run -d <android-device-id>
+  ```
+- On macOS with Xcode installed, start an iOS simulator with:
+  ```bash
+  fvm flutter run -d <ios-simulator-id>
   ```
 
 Do debugging/testing/build etc then submit to us with PR against the development branch (dev) & we'll review your code

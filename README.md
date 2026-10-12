@@ -1,8 +1,9 @@
 <div align="center">
   <img width="600" src="assets/branding/spotube_banner.png" alt="Spotube Logo">
 
-An extensible open-source music streaming platform focused on Android.<br>
-This project targets Android only; supporting additional platforms adds significant build and maintenance overhead.
+Spotube is an open-source music streaming app for Android.
+<br>
+The project is already large and resource-intensive to maintain, so development is focused on Android rather than spreading effort across additional platforms.
 Bring your own music metadata/playlist/audio-source with plugins created by community or by yourself. A small step towards the decentralized music streaming era!
 
 Btw it's not just another Electron app 😉
@@ -36,10 +37,10 @@ Btw it's not just another Electron app 😉
 - 📖 Open source/libre software.
 - 🔉 Playback control is done locally, not on the server.
 
-## 📜 ⬇️ Installation guide
+## 📜 ⬇️ Android installation
 
 New versions usually release every 3-4 months.<br />
-Install Spotube on Android:
+Spotube is maintained for Android. Other platforms are outside the current project scope.
 
 <table>
   <tr>
