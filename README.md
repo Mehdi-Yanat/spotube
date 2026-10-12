@@ -1,9 +1,7 @@
 <div align="center">
   <img width="600" src="assets/branding/spotube_banner.png" alt="Spotube Logo">
 
-Spotube is an open-source music streaming app for Android.
-<br>
-The project is already large and resource-intensive to maintain, so development is focused on Android rather than spreading effort across additional platforms.
+A cross-platform extensible open-source music streaming platform.<br>
 Bring your own music metadata/playlist/audio-source with plugins created by community or by yourself. A small step towards the decentralized music streaming era!
 
 Btw it's not just another Electron app 😉
@@ -20,16 +18,18 @@ Btw it's not just another Electron app 😉
 
 ---
 
+![Spotube Desktop](assets/branding/spotube-screenshot.png)
+
 ![Spotube Mobile](assets/branding/mobile-screenshots/combined.jpg)
 
 </div>
 
 ## 🌃 Features
 
-- 🧩 Plugin powered, supports custom music services through plugins.
+- 🧩 Plugin powered, supports any platform or custom music service through plugins.
 - 🗺️ Community driven plugins for popular platforms or create your own.
 - ⬇️ Freely downloadable tracks with tagged metadata.
-- 📱 Android support.
+- 🖥️ 📱 Cross-platform support.
 - 🪶 Small size & less data usage.
 - 🕒 Time synced lyrics regardless of the plugin support.
 - ✋ No telemetry, diagnostics or user data collection.
@@ -37,15 +37,30 @@ Btw it's not just another Electron app 😉
 - 📖 Open source/libre software.
 - 🔉 Playback control is done locally, not on the server.
 
-## 📜 ⬇️ Android installation
+## 📜 ⬇️ Installation guide
 
 New versions usually release every 3-4 months.<br />
-Spotube is maintained for Android. Other platforms are outside the current project scope.
+This handy table lists all the methods you can use to install Spotube:
 
 <table>
   <tr>
     <th>Platform</th>
     <th>Package/Installation Method</th>
+  </tr>
+  <tr>
+    <td>Windows</td>
+    <td>
+      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-windows-x86_64-setup.exe">
+        <img width="220" alt="Windows Download" src="https://get.todoist.help/hc/article_attachments/4403191721234/WindowsButton.svg">
+      </a>
+  </tr>
+  <tr>
+    <td>MacOS</td>
+    <td>
+      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-macos-universal.dmg">
+        <img width="220" alt="MacOS Download" src="https://memory-map.com/wp-content/uploads/download-mac-OS-01.svg">
+      </a>
+    </td>
   </tr>
   <tr>
     <td>Android</td>
@@ -57,6 +72,94 @@ Spotube is maintained for Android. Other platforms are outside the current proje
       <a href="https://f-droid.org/packages/oss.krtirtho.spotube">
         <img width="220" alt="Download from F-Droid" src="https://user-images.githubusercontent.com/61944859/174589876-bace24c0-b3fd-4c4a-bdb4-6fa82b5853ec.png">
       </a>
+    </td>
+  </tr>
+  <tr>
+  <tr>
+    <td>iOS</td>
+    <td>
+      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-iOS.ipa">
+        <img width="220" alt="Download iOS IPA" src="https://github.com/user-attachments/assets/3e50d93d-fb39-435c-be6b-337745f7c423">
+      </a>
+      <br/>
+      <blockquote style="color:red">
+        *iPA file only. Requires sideloading with <a href="https://altstore.io/">AltStore</a> or similar tools.
+      </blockquote>
+    </td>
+  </tr>
+  <tr>
+    <td>Flatpak</td>
+    <td>
+      <p><code>flatpak install com.github.KRTirtho.Spotube</code></p>
+      <a href="https://flathub.org/apps/details/com.github.KRTirtho.Spotube">
+        <img width="220" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>AppImage</td>
+    <td>AppImage's lacking stability led to it's temporary removal. More information at https://github.com/KRTirtho/spotube/issues/1082</td>
+  </tr>
+  <tr>
+    <td>Debian/Ubuntu</td>
+    <td>
+      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-linux-x86_64.deb">
+        <img width="220" alt="Debian/Ubuntu Download" src="https://user-images.githubusercontent.com/61944859/169097994-e92aff78-fd75-4c93-b6e4-f072a4b5a7ed.png">
+      </a>
+      <p>Then run: <code>sudo apt install ./Spotube-linux-x86_64.deb</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td>Arch/Manjaro</td>
+    <td>
+      <p>With pamac: <code>sudo pamac install spotube-bin</code></p>
+      <p>With yay: <code>yay -Sy spotube-bin</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td>Fedora/OpenSuse</td>
+    <td>
+      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-linux-x86_64.rpm">
+        <img width="220" alt="Fedora/OpenSuse Download" src="https://user-images.githubusercontent.com/61944859/223638350-5926b9da-04d6-4edd-931d-ad533e4ff058.png">
+      </a>
+      <p>For Fedora: <code>sudo dnf install ./Spotube-linux-x86_64.rpm</code></p>
+      <p>For OpenSuse: <code>sudo zypper in ./Spotube-linux-x86_64.rpm</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td>Linux (tarball)</td>
+    <td>
+      <a href="https://github.com/KRTirtho/spotube/releases/latest">
+        <img width="220" alt="Tarball Download" src="https://user-images.githubusercontent.com/61944859/169456985-e0ba1fd4-10e8-4cc0-ab94-337acc6e0295.png">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>Macos - <a href="https://brew.sh">Homebrew</a></td>
+    <td>
+<pre lang="bash">
+brew tap krtirtho/apps
+brew install --cask spotube
+</pre>   
+    </td>
+  </tr>
+  <tr>
+    <td>Windows - <a href="https://chocolatey.org">Chocolatey</a></td>
+    <td>
+      <p><code>choco install spotube</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td>Windows - <a href="https://scoop.sh">Scoop</a></td>
+    <td>
+      <p><code>scoop bucket add extras</code></p>
+      <p><code>scoop install spotube</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td>Windows - <a href="https://github.com/microsoft/winget-cli">WinGet</a></td>
+    <td>
+      <p><code>winget install --id KRTirtho.Spotube</code></p>
     </td>
   </tr>
 </table>
@@ -75,7 +178,7 @@ You can compile Spotube's source code by [following these instructions](CONTRIBU
 
 - [Kingkor Roy Tirtho](https://github.com/KRTirtho) - The Founder, Maintainer and Lead Developer
 - [Owen Connor](https://github.com/owencz1998) - The Cool Discord Moderator
-- [Piotr Rogowski](https://github.com/karniv00l) - The Developer
+- [Piotr Rogowski](https://github.com/karniv00l) - The MacOS Developer
 - [Rusty Apple](https://github.com/RustyApple) - The Mysterious Unknown Guy
 
 ## 💼 License
@@ -91,7 +194,7 @@ If you are curious, you can [read the reason of choosing this license](https://d
 
 ### Services
 
-1. [Flutter](https://flutter.dev) - Flutter transforms the app development process. Build, test, and deploy beautiful apps from a single codebase
+1. [Flutter](https://flutter.dev) - Flutter transforms the app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase
 1. [MPV](https://mpv.io) - mpv is a free (as in freedom) media player for the command line. It supports a wide variety of media file formats, audio and video codecs, and subtitle types.
 1. [Musicbrainz](https://musicbrainz.org) - MusicBrainz is a MetaBrainz project that aims to create a collaborative music database that is similar to the freedb project.
 1. [Listenbrainz](https://listenbrainz.org) - ListenBrainz is a open-source project by the MetaBrainz Foundation that allows users to crowdsource and publicly store their digital music listening data.
@@ -101,7 +204,11 @@ If you are curious, you can [read the reason of choosing this license](https://d
 1. [NewPipeExtractor](https://github.com/TeamNewPipe/NewPipeExtractor) - NewPipe's core library for extracting data from streaming sites.
 1. [YouTubeExplodeDart](https://github.com/Hexer10/youtube_explode_dart) - A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.
 1. [LRCLib](https://lrclib.net/) - A public synced lyric API.
+1. [Linux](https://www.linux.org) - Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged in a Linux distribution
+1. [AUR](https://aur.archlinux.org) - AUR stands for Arch User Repository. It is a community-driven repository for Arch-based Linux distributions users
+1. [Flatpak](https://flatpak.org) - Flatpak is a utility for software deployment and package management for Linux
 1. [SponsorBlock](https://sponsor.ajay.app) - SponsorBlock is an open-source crowdsourced browser extension and open API for skipping sponsor segments in YouTube videos.
+1. [Inno Setup](https://jrsoftware.org/isinfo.php) - Inno Setup is a free installer for Windows programs by Jordan Russell and Martijn Laan
 1. [F-Droid](https://f-droid.org) - F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform. The client makes it easy to browse, install, and keep track of updates on your device
 1. [LastFM](https://last.fm) - Last.fm is a music streaming and discovery platform that helps users discover and share new music. It tracks users' music listening habits across many devices and platforms.
 
@@ -170,6 +277,7 @@ If you are curious, you can [read the reason of choosing this license](https://d
 1. [skeletonizer](https://github.com/Milad-Akarie/skeletonizer) - Converts already built widgets into skeleton loaders with no extra effort.
 1. [sliding_up_panel](https://github.com/akshathjain/sliding_up_panel) - A draggable Flutter widget that makes implementing a SlidingUpPanel much easier!
 1. [sliver_tools](https://github.com/Kavantix) - A set of useful sliver tools that are missing from the flutter framework
+1. [smtc_windows](https://pub.dev/packages/smtc_windows) - Windows `SystemMediaTransportControls` implementation for Flutter giving access to Windows OS Media Control applet.
 1. [sqlite3](https://github.com/simolus3/sqlite3.dart/tree/main/sqlite3) - Provides lightweight yet convenient bindings to SQLite by using dart:ffi
 1. [sqlite3_flutter_libs](https://github.com/simolus3/sqlite3.dart/tree/main/sqlite3_flutter_libs) - Flutter plugin to include native sqlite3 libraries with your app
 1. [timezone](https://pub.dev/packages/timezone) - Time zone database and time zone aware DateTime.
@@ -182,6 +290,7 @@ If you are curious, you can [read the reason of choosing this license](https://d
 1. [visibility_detector](https://pub.dev/packages/visibility_detector) - A widget that detects the visibility of its child and notifies a callback.
 1. [web_socket_channel](https://pub.dev/packages/web_socket_channel) - StreamChannel wrappers for WebSockets. Provides a cross-platform WebSocketChannel API, a cross-platform implementation of that API that communicates over an underlying StreamChannel.
 1. [wikipedia_api](https://github.com/KRTirtho/wikipedia_api) - Wikipedia API for dart and flutter
+1. [win32_registry](https://pub.dev/packages/win32_registry) - A package that provides a friendly Dart API for accessing the Windows Registry.
 1. [window_manager](https://leanflutter.dev) - This plugin allows Flutter desktop apps to resizing and repositioning the window.
 1. [youtube_explode_dart](https://github.com/Hexer10/youtube_explode_dart) - A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.
 1. [http_parser](https://pub.dev/packages/http_parser) - A platform-independent package for parsing and serializing HTTP formats.
