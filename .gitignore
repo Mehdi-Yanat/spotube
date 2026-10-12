@@ -45,17 +45,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-*.pkg.tar.zst
-/aur-struct/*.tar
-/aur-struct/src
-/aur-struct/pkg
-
-/deb-struct/usr
-/linux/packaging/deb/usr
-
-/AppDir
-/appimage-builder-cache
-*.AppImage
 
 /.flatpak
 /.flatpak-builder
