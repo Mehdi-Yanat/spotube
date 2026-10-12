@@ -76,8 +76,6 @@ class YouTubeEngineNotInstalledDialog extends HookConsumerWidget {
                 controller: controller,
                 placeholder: Text(switch (context.theme.platform) {
                   TargetPlatform.macOS => "e.g. /opt/homebrew/bin/yt-dlp",
-                  TargetPlatform.windows =>
-                    r"e.g. C:\Program Files\yt-dlp\yt-dlp.exe",
                   _ => "e.g. /home/user/.local/bin/yt-dlp",
                 }),
               ),

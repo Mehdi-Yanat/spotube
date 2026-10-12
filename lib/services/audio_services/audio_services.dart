@@ -6,14 +6,12 @@ import 'package:spotube/models/metadata/metadata.dart';
 import 'package:spotube/provider/audio_player/audio_player.dart';
 import 'package:spotube/services/audio_player/audio_player.dart';
 import 'package:spotube/services/audio_services/mobile_audio_service.dart';
-import 'package:spotube/services/audio_services/windows_audio_service.dart';
 import 'package:spotube/utils/platform.dart';
 
 class AudioServices with WidgetsBindingObserver {
   final MobileAudioService? mobile;
-  final WindowsAudioService? smtc;
 
-  AudioServices(this.mobile, this.smtc) {
+  AudioServices(this.mobile) {
     WidgetsBinding.instance.addObserver(this);
   }
 
@@ -40,13 +38,10 @@ class AudioServices with WidgetsBindingObserver {
             ),
           )
         : null;
-    final smtc = kIsWindows ? WindowsAudioService(ref, playback) : null;
-
-    return AudioServices(mobile, smtc);
+    return AudioServices(mobile);
   }
 
   Future<void> addTrack(SpotubeTrackObject track) async {
-    await smtc?.addTrack(track);
     mobile?.addItem(MediaItem(
       id: track.id,
       album: track.album.name,
@@ -81,7 +76,6 @@ class AudioServices with WidgetsBindingObserver {
   }
 
   void dispose() {
-    smtc?.dispose();
     WidgetsBinding.instance.removeObserver(this);
   }
 }

@@ -83,7 +83,7 @@ android {
             signingConfig signingConfigs.release
         }
         debug {
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
 
@@ -95,19 +95,16 @@ android {
             resValue "string", "app_name_en", "Spotube Nightly"
             applicationIdSuffix ".nightly"
             versionNameSuffix "-nightly"
-            signingConfig signingConfigs.release
         }
         dev {
             dimension "default"
             resValue "string", "app_name_en", "Spotube Dev"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
-            signingConfig signingConfigs.release
         }
         stable {
             dimension "default"
             resValue "string", "app_name_en", "Spotube"
-            signingConfig signingConfigs.release
         }
     }
 

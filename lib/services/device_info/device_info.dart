@@ -13,7 +13,6 @@ class DeviceInfoService {
       AndroidDeviceInfo() => info.id,
       IosDeviceInfo() => info.identifierForVendor ?? info.model,
       MacOsDeviceInfo() => info.systemGUID ?? info.model,
-      WindowsDeviceInfo() => info.deviceId,
       LinuxDeviceInfo() => info.machineId ?? info.id,
       _ => 'Unknown',
     };
@@ -26,7 +25,6 @@ class DeviceInfoService {
       AndroidDeviceInfo() => info.model,
       IosDeviceInfo() => info.localizedModel,
       MacOsDeviceInfo() => info.computerName,
-      WindowsDeviceInfo() => info.computerName,
       LinuxDeviceInfo() => info.name,
       _ => 'Unknown',
     };

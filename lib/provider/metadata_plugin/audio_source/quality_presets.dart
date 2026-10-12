@@ -15,11 +15,11 @@ part 'quality_presets.freezed.dart';
 @freezed
 class AudioSourcePresetsState with _$AudioSourcePresetsState {
   factory AudioSourcePresetsState({
-    @Default([]) final List<SpotubeAudioSourceContainerPreset> presets,
-    @Default(0) final int selectedStreamingQualityIndex,
-    @Default(0) final int selectedStreamingContainerIndex,
-    @Default(0) final int selectedDownloadingQualityIndex,
-    @Default(0) final int selectedDownloadingContainerIndex,
+    @Default([]) List<SpotubeAudioSourceContainerPreset> presets,
+    @Default(0) int selectedStreamingQualityIndex,
+    @Default(0) int selectedStreamingContainerIndex,
+    @Default(0) int selectedDownloadingQualityIndex,
+    @Default(0) int selectedDownloadingContainerIndex,
   }) = _AudioSourcePresetsState;
 
   factory AudioSourcePresetsState.fromJson(Map<String, dynamic> json) =>

@@ -25,9 +25,9 @@ class UniversalImage extends HookWidget {
 
   static ImageProvider imageProvider(
     String path, {
-    final double? height,
-    final double? width,
-    final double scale = 1,
+    double? height,
+    double? width,
+    double scale = 1,
   }) {
     if (path.startsWith("http")) {
       return CachedNetworkImageProvider(

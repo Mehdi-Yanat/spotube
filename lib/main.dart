@@ -15,7 +15,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:local_notifier/local_notifier.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:metadata_god/metadata_god.dart';
-import 'package:smtc_windows/smtc_windows.dart';
 import 'package:spotube/collections/env.dart';
 import 'package:spotube/collections/http-override.dart';
 import 'package:spotube/collections/intents.dart';
@@ -23,7 +22,6 @@ import 'package:spotube/collections/routes.dart';
 import 'package:spotube/hooks/configurators/use_close_behavior.dart';
 import 'package:spotube/hooks/configurators/use_deep_linking.dart';
 import 'package:spotube/hooks/configurators/use_disable_battery_optimizations.dart';
-import 'package:spotube/hooks/configurators/use_fix_window_stretching.dart';
 import 'package:spotube/hooks/configurators/use_get_storage_perms.dart';
 import 'package:spotube/hooks/configurators/use_has_touch.dart';
 import 'package:spotube/models/database/database.dart';
@@ -70,8 +68,6 @@ Future<void> main(List<String> rawArgs) async {
 
     HttpOverrides.global = BadCertificateAllowlistOverrides();
 
-    // await registerWindowsScheme("spotify");
-
     tz.initializeTimeZones();
 
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
@@ -99,14 +95,10 @@ Future<void> main(List<String> rawArgs) async {
       await YtDlp.instance
           .setBinaryLocation(
             KVStoreService.getYoutubeEnginePath(YoutubeClientEngine.ytDlp) ??
-                "yt-dlp${kIsWindows ? '.exe' : ''}",
+                "yt-dlp",
           )
           .catchError((e, stack) => null);
       await FlutterDiscordRPC.initialize(Env.discordAppId);
-    }
-
-    if (kIsWindows) {
-      await SMTCWindows.initialize();
     }
 
     await EncryptedKvStoreService.initialize();
@@ -160,7 +152,6 @@ class Spotube extends HookConsumerWidget {
     ref.listen(metadataPluginUpdateCheckerProvider, (_, __) {});
     ref.listen(audioSourcePluginUpdateCheckerProvider, (_, __) {});
 
-    useFixWindowStretching();
     useDisableBatteryOptimizations();
     useDeepLinking(ref, router);
     useCloseBehavior(ref);

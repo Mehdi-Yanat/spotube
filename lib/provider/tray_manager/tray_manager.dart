@@ -21,11 +21,9 @@ class SystemTrayManager with TrayListener {
 
     if (enabled) {
       await trayManager.setIcon(
-        kIsWindows
-            ? 'assets/branding/spotube-logo.ico'
-            : kIsFlatpak
-                ? 'com.github.KRTirtho.Spotube'
-                : 'assets/branding/spotube-logo.png',
+        kIsFlatpak
+            ? 'com.github.KRTirtho.Spotube'
+            : 'assets/branding/spotube-logo.png',
       );
       trayManager.addListener(this);
     } else {
@@ -39,20 +37,12 @@ class SystemTrayManager with TrayListener {
 
   @override
   onTrayIconMouseDown() {
-    if (kIsWindows) {
-      windowManager.show();
-    } else {
-      trayManager.popUpContextMenu();
-    }
+    trayManager.popUpContextMenu();
   }
 
   @override
   onTrayIconRightMouseDown() {
-    if (!kIsWindows) {
-      windowManager.show();
-    } else {
-      trayManager.popUpContextMenu();
-    }
+    windowManager.show();
   }
 }
 

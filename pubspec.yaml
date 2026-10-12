@@ -99,7 +99,6 @@ dependencies:
   skeletonizer: ^2.1.0+1
   sliding_up_panel: ^2.0.0+1
   sliver_tools: ^0.2.12
-  smtc_windows: ^1.1.0
   sqlite3: ^2.4.3
   sqlite3_flutter_libs: ^0.5.23
   timezone: ^0.10.0
@@ -112,7 +111,6 @@ dependencies:
   visibility_detector: ^0.4.0+2
   web_socket_channel: ^3.0.1
   wikipedia_api: ^0.1.0
-  win32_registry: ^1.1.5
   window_manager: ^0.4.3
   youtube_explode_dart: ^3.1.0
   yt_dlp_dart:
@@ -202,10 +200,6 @@ dependency_overrides:
     git:
       url: https://github.com/media-kit/media-kit
       path: libs/macos/media_kit_libs_macos_audio
-  media_kit_libs_windows_audio:
-    git:
-      url: https://github.com/media-kit/media-kit
-      path: libs/windows/media_kit_libs_windows_audio
   media_kit_libs_linux:
     git:
       url: https://github.com/media-kit/media-kit
@@ -219,7 +213,6 @@ flutter:
     - assets/images/logos/
     - assets/branding/spotube-logo.png
     - assets/branding/spotube-logo-light.png
-    - assets/branding/spotube-logo.ico
     - assets/plugins/spotube-plugin-musicbrainz-listenbrainz/plugin.smplug
     - assets/plugins/spotube-plugin-youtube-audio/plugin.smplug
     - LICENSE
